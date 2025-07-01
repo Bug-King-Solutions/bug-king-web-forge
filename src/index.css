@@ -128,10 +128,6 @@ All colors MUST be HSL.
   .hover-lift {
     @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
   }
-  
-  .fade-in {
-    @apply animate-in fade-in duration-500;
-  }
 }
 
 @layer base {

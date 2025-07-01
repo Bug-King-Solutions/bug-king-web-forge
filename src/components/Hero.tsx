@@ -15,7 +15,7 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto fade-in">
+        <div className="max-w-4xl mx-auto animate-in fade-in duration-700">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Bug King
             <span className="text-tech-yellow"> Solutions</span>
