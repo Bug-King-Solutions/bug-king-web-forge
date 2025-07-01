@@ -7,7 +7,9 @@ import {
   Users, 
   Cog, 
   Monitor, 
-  Wifi 
+  Wifi,
+  Bot,
+  Cpu
 } from "lucide-react";
 
 const services = [
@@ -34,6 +36,18 @@ const services = [
     title: "UI/UX Design",
     description: "User-centered design that creates exceptional digital experiences",
     features: ["User research", "Prototyping", "Visual design", "Usability testing"]
+  },
+  {
+    icon: Bot,
+    title: "Robotics",
+    description: "Advanced robotics solutions for automation and intelligent systems",
+    features: ["Robot development", "Automation systems", "AI integration", "Custom robotics"]
+  },
+  {
+    icon: Cpu,
+    title: "IoT Solutions",
+    description: "Internet of Things solutions for smart connectivity and data collection",
+    features: ["IoT device development", "Sensor networks", "Data analytics", "Smart systems"]
   },
   {
     icon: Users,
@@ -63,11 +77,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-tech-blue">Services</span>
+            Our <span className="text-tech-yellow">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We offer comprehensive technology solutions to help your business thrive in the digital age
@@ -80,8 +94,8 @@ const Services = () => {
             return (
               <Card key={index} className="hover-lift tech-shadow border-0 card-gradient">
                 <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-tech-blue/10 rounded-full w-fit">
-                    <IconComponent className="h-8 w-8 text-tech-blue" />
+                  <div className="mx-auto mb-4 p-3 bg-tech-yellow/10 rounded-full w-fit">
+                    <IconComponent className="h-8 w-8 text-tech-black" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                   <CardDescription className="text-center">

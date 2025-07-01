@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="py-20 hero-gradient">
+    <section id="contact" className="py-20 hero-gradient">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

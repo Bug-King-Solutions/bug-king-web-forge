@@ -45,7 +45,7 @@ const Clients = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Trusted by <span className="text-tech-blue">Industry Leaders</span>
+            Trusted by <span className="text-tech-yellow">Industry Leaders</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We've had the privilege of working with amazing companies across various industries
@@ -56,11 +56,11 @@ const Clients = () => {
           {clients.map((client, index) => (
             <Card key={index} className="hover-lift tech-shadow border-0 card-gradient">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-tech-blue text-white rounded-full flex items-center justify-center text-xl font-bold">
+                <div className="w-16 h-16 mx-auto mb-4 bg-tech-black text-tech-yellow rounded-full flex items-center justify-center text-xl font-bold">
                   {client.logo}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{client.name}</h3>
-                <p className="text-tech-blue font-medium mb-2">{client.industry}</p>
+                <p className="text-tech-black font-medium mb-2">{client.industry}</p>
                 <p className="text-muted-foreground">{client.description}</p>
               </CardContent>
             </Card>

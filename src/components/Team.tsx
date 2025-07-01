@@ -39,7 +39,7 @@ const Team = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Meet Our <span className="text-tech-blue">Team</span>
+            Meet Our <span className="text-tech-yellow">Team</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Talented professionals dedicated to delivering exceptional technology solutions
@@ -58,7 +58,7 @@ const Team = () => {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-tech-blue font-medium mb-3">{member.role}</p>
+                <p className="text-tech-black font-medium mb-3">{member.role}</p>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {member.bio}
                 </p>
@@ -72,14 +72,14 @@ const Team = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <div className="p-2 bg-tech-blue/10 rounded-full hover:bg-tech-blue/20 cursor-pointer transition-colors">
-                    <Linkedin className="h-4 w-4 text-tech-blue" />
+                  <div className="p-2 bg-tech-yellow/10 rounded-full hover:bg-tech-yellow/20 cursor-pointer transition-colors">
+                    <Linkedin className="h-4 w-4 text-tech-black" />
                   </div>
-                  <div className="p-2 bg-tech-blue/10 rounded-full hover:bg-tech-blue/20 cursor-pointer transition-colors">
-                    <Github className="h-4 w-4 text-tech-blue" />
+                  <div className="p-2 bg-tech-yellow/10 rounded-full hover:bg-tech-yellow/20 cursor-pointer transition-colors">
+                    <Github className="h-4 w-4 text-tech-black" />
                   </div>
-                  <div className="p-2 bg-tech-blue/10 rounded-full hover:bg-tech-blue/20 cursor-pointer transition-colors">
-                    <Mail className="h-4 w-4 text-tech-blue" />
+                  <div className="p-2 bg-tech-yellow/10 rounded-full hover:bg-tech-yellow/20 cursor-pointer transition-colors">
+                    <Mail className="h-4 w-4 text-tech-black" />
                   </div>
                 </div>
               </CardContent>
