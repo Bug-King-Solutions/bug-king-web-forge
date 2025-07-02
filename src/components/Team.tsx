@@ -9,7 +9,7 @@ const team = [
     tag: "Pioneer Bug King",
     bio: "Full Stack Developer with over 10 years of experience specializing in modern web technologies and robotics.",
     skills: ["Vanilla JS", "Node.js", "React", "TypeScript", "AWS", "Robotics", "Java", "Python", "C#", "PHP", "Laravel"],
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    image: "https://media.cakeresume.com/image/upload/s--EeKI5TEw--/c_fill,g_face,h_300,w_300/v1724317512/rfql28xlg1tqf2pnntpo.jpg"
   },
   {
     name: "Tuksa Emmanuel",
