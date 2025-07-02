@@ -4,31 +4,35 @@ import { Linkedin, Github, Mail } from "lucide-react";
 
 const team = [
   {
-    name: "Alex Johnson",
-    role: "Lead Software Engineer",
-    bio: "Full-stack developer with 8+ years of experience in React, Node.js, and cloud technologies.",
-    skills: ["React", "Node.js", "AWS", "TypeScript"],
+    name: "Benjamin Sanga",
+    role: "Lead Frontend Engineer",
+    tag: "Pioneer Bug King",
+    bio: "Full Stack Developer with over 10 years of experience specializing in modern web technologies and robotics.",
+    skills: ["Vanilla JS", "Node.js", "React", "TypeScript", "AWS", "Robotics", "Java", "Python", "C#", "PHP", "Laravel"],
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
   },
   {
-    name: "Sarah Chen",
-    role: "UI/UX Design Lead",
-    bio: "Creative designer passionate about crafting intuitive user experiences and beautiful interfaces.",
-    skills: ["Figma", "User Research", "Prototyping", "Design Systems"],
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face"
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "Mobile App Developer",
-    bio: "Specialist in React Native and Flutter with a track record of successful app store launches.",
-    skills: ["React Native", "Flutter", "iOS", "Android"],
+    name: "Tuksa Emmanuel",
+    role: "Lead Mobile Engineer",
+    tag: "Pioneer Bug King",
+    bio: "Fullstack Mobile Developer with over 6 years of experience in cross-platform mobile development.",
+    skills: ["Flutter", "Java", "Kotlin", "Node.js", "Express.js"],
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
   },
   {
-    name: "Emily Thompson",
-    role: "DevOps Engineer",
-    bio: "Infrastructure expert ensuring scalable, secure, and reliable deployment pipelines.",
-    skills: ["Docker", "Kubernetes", "CI/CD", "Monitoring"],
+    name: "Kareem Victor",
+    role: "Lead Product Engineer",
+    tag: "Pioneer Bug King",
+    bio: "Product Engineer specializing in user experience design and system architecture with expertise in design tools.",
+    skills: ["Figma", "Photoshop", "Flutter", "Python", "C++", "User Research", "System Design", "Adobe XD", "ProtoPie"],
+    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    name: "Join Our Team",
+    role: "We're Hiring!",
+    tag: "Future Pioneer",
+    bio: "Looking for talented developers and designers to join our growing team of tech innovators.",
+    skills: ["Passion", "Innovation", "Teamwork", "Excellence"],
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
   }
 ];
@@ -58,7 +62,10 @@ const Team = () => {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-tech-black font-medium mb-3">{member.role}</p>
+                <p className="text-tech-black font-medium mb-1">{member.role}</p>
+                <Badge variant="secondary" className="mb-3 text-xs bg-tech-yellow/20 text-tech-black">
+                  {member.tag}
+                </Badge>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {member.bio}
                 </p>

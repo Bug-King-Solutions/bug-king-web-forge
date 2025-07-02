@@ -2,40 +2,40 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const clients = [
   {
-    name: "TechCorp",
-    logo: "TC",
-    description: "E-commerce platform development",
-    industry: "Retail Technology"
+    name: "Netaccess Communications Limited",
+    logo: "NC",
+    description: "Enterprise networking solutions",
+    industry: "Telecommunications"
   },
   {
-    name: "FinanceFirst",
-    logo: "FF",
-    description: "Mobile banking application",
-    industry: "Financial Services"
+    name: "Choice Pet",
+    logo: "CP",
+    description: "Pet care mobile application",
+    industry: "Pet Care"
   },
   {
-    name: "HealthPlus",
-    logo: "H+",
-    description: "Telemedicine platform",
-    industry: "Healthcare"
+    name: "Studio 24",
+    logo: "S24",
+    description: "Creative studio platform",
+    industry: "Creative Services"
   },
   {
-    name: "EduTech Solutions",
-    logo: "ET",
-    description: "Learning management system",
-    industry: "Education"
+    name: "Bit Design Agency",
+    logo: "BDA",
+    description: "Digital design solutions",
+    industry: "Design Agency"
   },
   {
-    name: "StartupX",
-    logo: "SX",
-    description: "MVP development & scaling",
-    industry: "Technology Startup"
+    name: "Sabi Save",
+    logo: "SS",
+    description: "Financial savings platform",
+    industry: "FinTech"
   },
   {
-    name: "Manufacturing Co",
-    logo: "MC",
-    description: "IoT monitoring systems",
-    industry: "Manufacturing"
+    name: "Your Company",
+    logo: "YC",
+    description: "Ready to work together?",
+    industry: "All Industries"
   }
 ];
 

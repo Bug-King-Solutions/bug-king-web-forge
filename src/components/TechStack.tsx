@@ -4,27 +4,45 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const techCategories = [
   {
     category: "Frontend",
-    technologies: ["React", "Flutter"],
+    technologies: [
+      { name: "React", logo: "⚛️" },
+      { name: "Flutter", logo: "💙" }
+    ],
     color: "bg-tech-yellow/10 text-tech-black border-tech-yellow/20"
   },
   {
     category: "Backend",
-    technologies: ["Node.js", "Express", "PHP", "Laravel", "Python"],
+    technologies: [
+      { name: "Node.js", logo: "🟢" },
+      { name: "Express", logo: "⚡" },
+      { name: "PHP", logo: "🐘" },
+      { name: "Laravel", logo: "🔴" },
+      { name: "Python", logo: "🐍" }
+    ],
     color: "bg-tech-black/10 text-tech-black border-tech-black/20"
   },
   {
     category: "Cloud & DevOps",
-    technologies: ["AWS", "Firebase"],
+    technologies: [
+      { name: "AWS", logo: "☁️" },
+      { name: "Firebase", logo: "🔥" }
+    ],
     color: "bg-tech-yellow/10 text-tech-black border-tech-yellow/20"
   },
   {
     category: "Mobile",
-    technologies: ["Flutter", "Kotlin"],
+    technologies: [
+      { name: "Flutter", logo: "💙" },
+      { name: "Kotlin", logo: "🔷" }
+    ],
     color: "bg-tech-black/10 text-tech-black border-tech-black/20"
   },
   {
     category: "Systems",
-    technologies: ["C++", "Python"],
+    technologies: [
+      { name: "C++", logo: "⚙️" },
+      { name: "Python", logo: "🐍" }
+    ],
     color: "bg-tech-yellow/10 text-tech-black border-tech-yellow/20"
   }
 ];
@@ -53,10 +71,11 @@ const TechStack = () => {
                   {category.technologies.map((tech, techIndex) => (
                     <Badge 
                       key={techIndex} 
-                      className={`${category.color} font-medium px-3 py-1`}
+                      className={`${category.color} font-medium px-3 py-1 flex items-center gap-2`}
                       variant="outline"
                     >
-                      {tech}
+                      <span className="text-lg">{tech.logo}</span>
+                      {tech.name}
                     </Badge>
                   ))}
                 </div>
