@@ -1,47 +1,60 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+// Import tech logos
+import reactLogo from "@/assets/logos/react.svg";
+import flutterLogo from "@/assets/logos/flutter.svg";
+import nodeLogo from "@/assets/logos/nodejs.svg";
+import expressLogo from "@/assets/logos/express.svg";
+import phpLogo from "@/assets/logos/php.svg";
+import laravelLogo from "@/assets/logos/laravel.svg";
+import pythonLogo from "@/assets/logos/python.svg";
+import awsLogo from "@/assets/logos/aws.svg";
+import firebaseLogo from "@/assets/logos/firebase.svg";
+import kotlinLogo from "@/assets/logos/kotlin.svg";
+import cppLogo from "@/assets/logos/cpp.svg";
+
 const techCategories = [
   {
     category: "Frontend",
     technologies: [
-      { name: "React", logo: "⚛️" },
-      { name: "Flutter", logo: "💙" }
+      { name: "React", logo: reactLogo },
+      { name: "Flutter", logo: flutterLogo }
     ],
     color: "bg-tech-yellow/10 text-tech-black border-tech-yellow/20"
   },
   {
     category: "Backend",
     technologies: [
-      { name: "Node.js", logo: "🟢" },
-      { name: "Express", logo: "⚡" },
-      { name: "PHP", logo: "🐘" },
-      { name: "Laravel", logo: "🔴" },
-      { name: "Python", logo: "🐍" }
+      { name: "Node.js", logo: nodeLogo },
+      { name: "Express", logo: expressLogo },
+      { name: "PHP", logo: phpLogo },
+      { name: "Laravel", logo: laravelLogo },
+      { name: "Python", logo: pythonLogo }
     ],
     color: "bg-tech-black/10 text-tech-black border-tech-black/20"
   },
   {
     category: "Cloud & DevOps",
     technologies: [
-      { name: "AWS", logo: "☁️" },
-      { name: "Firebase", logo: "🔥" }
+      { name: "AWS", logo: awsLogo },
+      { name: "Firebase", logo: firebaseLogo }
     ],
     color: "bg-tech-yellow/10 text-tech-black border-tech-yellow/20"
   },
   {
     category: "Mobile",
     technologies: [
-      { name: "Flutter", logo: "💙" },
-      { name: "Kotlin", logo: "🔷" }
+      { name: "Flutter", logo: flutterLogo },
+      { name: "Kotlin", logo: kotlinLogo }
     ],
     color: "bg-tech-black/10 text-tech-black border-tech-black/20"
   },
   {
     category: "Systems",
     technologies: [
-      { name: "C++", logo: "⚙️" },
-      { name: "Python", logo: "🐍" }
+      { name: "C++", logo: cppLogo },
+      { name: "Python", logo: pythonLogo }
     ],
     color: "bg-tech-yellow/10 text-tech-black border-tech-yellow/20"
   }
@@ -74,7 +87,11 @@ const TechStack = () => {
                       className={`${category.color} font-medium px-3 py-1 flex items-center gap-2`}
                       variant="outline"
                     >
-                      <span className="text-lg">{tech.logo}</span>
+                      <img 
+                        src={tech.logo} 
+                        alt={`${tech.name} logo`} 
+                        className="w-5 h-5 object-contain"
+                      />
                       {tech.name}
                     </Badge>
                   ))}
