@@ -10,68 +10,68 @@ const bugKingsData = {
   "benjamin-sanga": {
     name: "Benjamin Sanga",
     title: "Lead Front End Engineer",
-    subtitle: "Full Stack Developer",
+    subtitle: "Full Stack Developer & Tech Lead",
     experience: "10+ years",
-    image: "/placeholder.svg",
-    skills: ["Vanilla JS", "Node.js", "React", "TypeScript", "AWS", "Robotics", "Java", "Python", "C#", "PHP", "Laravel"],
-    description: "Master of full-stack development with over a decade of experience building scalable applications.",
-    longDescription: "Benjamin is a seasoned full-stack developer with an exceptional track record of delivering complex web applications. His expertise spans from front-end frameworks to backend systems, cloud infrastructure, and even robotics. With over 10 years in the field, he has led numerous projects and mentored countless developers.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    skills: ["JavaScript", "React", "Node.js", "TypeScript", "AWS", "Python", "PHP", "Laravel", "System Architecture"],
+    description: "Seasoned full-stack engineer with expertise in modern web technologies and team leadership.",
+    longDescription: "Benjamin is a highly skilled full-stack developer and tech lead with over 10 years of experience in software engineering. He specializes in JavaScript technologies, particularly React and Node.js, and has extensive experience with cloud platforms like AWS. His leadership skills and technical expertise make him invaluable in driving complex projects to completion.",
     projects: [
-      { name: "E-commerce Platform", tech: "React, Node.js, AWS", impact: "Handled 100k+ daily users" },
-      { name: "IoT Dashboard", tech: "Python, React, AWS IoT", impact: "Monitored 500+ devices" },
-      { name: "Robotics Control System", tech: "C#, Python, Java", impact: "Automated factory operations" }
+      { name: "Enterprise Web Platform", tech: "React, Node.js, AWS", impact: "Serving 50k+ users daily" },
+      { name: "E-commerce Solution", tech: "Laravel, PHP, MySQL", impact: "Processing $1M+ transactions" },
+      { name: "Mobile API Backend", tech: "Node.js, Express, MongoDB", impact: "Supporting 3 mobile apps" }
     ],
     achievements: [
-      "Led 15+ successful project deliveries",
-      "Architected systems serving 100k+ users",
-      "Mentored 20+ junior developers",
-      "Pioneered company's robotics division"
+      "Led development teams of 8+ engineers",
+      "Architected systems handling 100k+ concurrent users", 
+      "Reduced deployment time by 70% through CI/CD",
+      "Mentored 15+ junior developers"
     ],
     location: "Lagos, Nigeria",
     joinDate: "2019"
   },
-  "tuksa-emmanuel": {
-    name: "Tuksa Emmanuel",
-    title: "Lead Mobile Engineer", 
-    subtitle: "Fullstack Mobile Developer",
+  "emmanuel-david": {
+    name: "Emmanuel David",
+    title: "Lead Mobile Engineer",
+    subtitle: "Senior Flutter Developer", 
     experience: "6+ years",
-    image: "/placeholder.svg",
-    skills: ["Flutter", "Java", "Kotlin", "Node.js", "Express.js"],
-    description: "Mobile development virtuoso specializing in cross-platform solutions.",
-    longDescription: "Tuksa is our mobile development expert with deep knowledge in both native and cross-platform development. His passion for creating seamless user experiences on mobile devices has resulted in apps that delight users and drive business growth.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    skills: ["Flutter", "Dart", "Firebase", "Node.js", "Express.js", "Mobile Architecture"],
+    description: "Expert mobile developer specializing in Flutter and cross-platform solutions.",
+    longDescription: "Emmanuel is a passionate mobile developer with deep expertise in Flutter development. Over his 6+ years in mobile development, he has built and shipped numerous successful mobile applications. His focus on clean architecture and user experience has made him the go-to expert for complex mobile projects.",
     projects: [
-      { name: "Financial Mobile App", tech: "Flutter, Node.js", impact: "50k+ downloads" },
-      { name: "Health Tracking App", tech: "Kotlin, Express.js", impact: "Featured on Play Store" },
-      { name: "Social Platform", tech: "Flutter, Node.js", impact: "10k+ active users" }
+      { name: "Fintech Mobile App", tech: "Flutter, Firebase", impact: "100k+ downloads" },
+      { name: "Social Commerce App", tech: "Flutter, Node.js", impact: "Featured by Google" },
+      { name: "Healthcare Platform", tech: "Flutter, Express.js", impact: "Serving 10k+ patients" }
     ],
     achievements: [
-      "Published 8+ apps on app stores",
-      "Achieved 4.8+ average app rating",
-      "Led mobile team of 5 developers",
-      "Implemented CI/CD for mobile apps"
+      "Built 12+ production mobile apps",
+      "Achieved 4.7+ average app store rating",
+      "Led mobile architecture for 5+ projects", 
+      "Reduced app crash rate by 90%"
     ],
-    location: "Lagos, Nigeria", 
+    location: "Lagos, Nigeria",
     joinDate: "2020"
   },
   "kareem-victor": {
     name: "Kareem Victor",
     title: "Lead Product Engineer",
-    subtitle: "Design & Development",
-    experience: "5+ years", 
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    skills: ["Figma", "Photoshop", "Flutter", "Python", "C++", "User Research", "System Design", "Adobe XD", "ProtoPie"],
-    description: "Product visionary combining design expertise with technical prowess.",
-    longDescription: "Kareem bridges the gap between design and development, bringing a unique perspective that ensures products are not only beautiful but also technically sound. His background in both creative design and programming languages makes him invaluable in product development.",
+    subtitle: "UX Designer & Developer",
+    experience: "5+ years",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    skills: ["Figma", "Adobe Creative Suite", "Flutter", "Python", "User Research", "Prototyping"],
+    description: "Creative technologist bridging design and development with user-centered solutions.",
+    longDescription: "Kareem is a unique talent who seamlessly bridges the gap between design and development. With a strong background in user experience design and technical implementation, he ensures that products are not only visually appealing but also technically sound and user-friendly. His holistic approach to product development has been instrumental in creating award-winning digital experiences.",
     projects: [
-      { name: "Design System Framework", tech: "Figma, Flutter", impact: "Used across 5+ products" },
-      { name: "User Research Platform", tech: "Python, Adobe XD", impact: "Improved UX by 40%" },
-      { name: "Interactive Prototypes", tech: "ProtoPie, C++", impact: "Reduced dev time by 30%" }
+      { name: "Design System", tech: "Figma, Flutter", impact: "Adopted across 8+ products" },
+      { name: "UX Research Platform", tech: "Python, Adobe XD", impact: "Improved user satisfaction by 45%" },
+      { name: "Interactive Prototypes", tech: "Protopie, Figma", impact: "Reduced development time by 35%" }
     ],
     achievements: [
-      "Designed 12+ award-winning interfaces",
-      "Conducted user research for 100+ features",
-      "Built reusable design systems",
-      "Improved conversion rates by 35%"
+      "Designed 20+ award-winning interfaces",
+      "Conducted UX research for 50+ features",
+      "Improved user conversion rates by 40%",
+      "Built comprehensive design systems"
     ],
     location: "Lagos, Nigeria",
     joinDate: "2021"

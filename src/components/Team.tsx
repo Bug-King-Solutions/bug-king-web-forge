@@ -74,9 +74,9 @@ const Team = () => {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-tech-black font-medium mb-1">{member.role}</p>
-                <Badge variant="secondary" className="mb-3 text-xs bg-tech-yellow/20 text-tech-black">
+                <h3 className="text-xl font-bold mb-1 text-foreground">{member.name}</h3>
+                <p className="text-primary font-medium mb-1">{member.role}</p>
+                <Badge variant="secondary" className="mb-3 text-xs bg-primary/20 text-primary">
                   {member.tag}
                 </Badge>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -92,14 +92,14 @@ const Team = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <div className="p-2 bg-tech-yellow/10 rounded-full hover:bg-tech-yellow/20 cursor-pointer transition-colors">
-                    <Linkedin className="h-4 w-4 text-tech-black" />
+                  <div className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 cursor-pointer transition-colors">
+                    <Linkedin className="h-4 w-4 text-primary" />
                   </div>
-                  <div className="p-2 bg-tech-yellow/10 rounded-full hover:bg-tech-yellow/20 cursor-pointer transition-colors">
-                    <Github className="h-4 w-4 text-tech-black" />
+                  <div className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 cursor-pointer transition-colors">
+                    <Github className="h-4 w-4 text-primary" />
                   </div>
-                  <div className="p-2 bg-tech-yellow/10 rounded-full hover:bg-tech-yellow/20 cursor-pointer transition-colors">
-                    <Mail className="h-4 w-4 text-tech-black" />
+                  <div className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 cursor-pointer transition-colors">
+                    <Mail className="h-4 w-4 text-primary" />
                   </div>
                 </div>
               </CardContent>
