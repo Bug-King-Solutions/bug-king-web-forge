@@ -8,51 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 5%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 0 0% 5%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 51 100% 50%;
-    --secondary-foreground: 0 0% 5%;
+    --secondary: 60 100% 95%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 60 20% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 51 100% 50%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 213 100% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 213 100% 40%;
+    --border: 60 20% 90%;
+    --input: 60 20% 90%;
+    --ring: 51 100% 50%;
 
     --radius: 0.75rem;
 
     /* Bug King Solutions Brand Colors */
-    --tech-black: 0 0% 5%;
+    --tech-white: 0 0% 100%;
     --tech-yellow: 51 100% 50%;
-    --tech-blue: 213 100% 40%;
+    --tech-blue: 213 100% 60%;
     --tech-yellow-glow: 51 100% 60%;
-    --tech-blue-glow: 213 100% 50%;
+    --tech-blue-glow: 213 100% 70%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--tech-black)), hsl(0 0% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--tech-white)), hsl(60 20% 98%));
     --gradient-accent: linear-gradient(90deg, hsl(var(--tech-yellow)), hsl(51 100% 60%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(51 100% 98%));
+    --gradient-magic: linear-gradient(135deg, hsl(var(--tech-yellow)) 0%, hsl(var(--tech-blue)) 100%);
 
     /* Shadows */
-    --shadow-tech: 0 20px 40px -12px hsl(var(--tech-yellow) / 0.25);
-    --shadow-glow: 0 0 30px hsl(var(--tech-yellow) / 0.4);
+    --shadow-tech: 0 20px 40px -12px hsl(var(--tech-yellow) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--tech-yellow) / 0.5);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -65,42 +66,43 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 0 0% 5%;
+    --background: 0 0% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 8%;
+    --card: 0 0% 12%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 8%;
+    --popover: 0 0% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 0 0% 95%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 51 100% 50%;
-    --secondary-foreground: 0 0% 5%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 51 100% 50%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 213 100% 40%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 213 100% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 213 100% 40%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 51 100% 50%;
 
-    /* Brand colors remain consistent */
-    --tech-black: 0 0% 5%;
+    /* Brand colors for dark mode */
+    --tech-white: 0 0% 12%;
     --tech-yellow: 51 100% 50%;
-    --tech-blue: 213 100% 40%;
+    --tech-blue: 213 100% 60%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(var(--tech-black)), hsl(var(--tech-blue)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--tech-white)), hsl(0 0% 15%));
+    --gradient-magic: linear-gradient(135deg, hsl(var(--tech-yellow)) 0%, hsl(var(--tech-blue)) 100%);
     --shadow-tech: 0 20px 40px -12px hsl(var(--tech-blue) / 0.4);
-    --shadow-glow: 0 0 30px hsl(var(--tech-yellow) / 0.4);
+    --shadow-glow: 0 0 30px hsl(var(--tech-yellow) / 0.5);
   }
 }
 
@@ -127,6 +129,36 @@ All colors MUST be HSL.
   
   .hover-lift {
     @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
+
+  .particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .magic-glow {
+    background: var(--gradient-magic);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
   }
 }
 

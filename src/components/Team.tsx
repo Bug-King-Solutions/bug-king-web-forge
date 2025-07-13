@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Linkedin, Github, Mail, Crown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const team = [
   {
@@ -42,12 +44,23 @@ const Team = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Meet Our <span className="text-tech-yellow">Team</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Talented professionals dedicated to delivering exceptional technology solutions
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Crown className="h-6 w-6 text-primary" />
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Meet Our <span className="magic-glow bg-clip-text text-transparent">Bug Kings</span>
+            </h2>
+            <Crown className="h-6 w-6 text-primary" />
+          </div>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
+            Our elite team of Bug Kings - masters who have attained expertise in multiple skill sets, 
+            not just technology. Each king brings unique strengths to solve complex challenges.
           </p>
+          <Button asChild variant="outline" className="group">
+            <Link to="/bug-kings" className="flex items-center gap-2">
+              View All Bug Kings
+              <Crown className="h-4 w-4 transition-transform group-hover:scale-110" />
+            </Link>
+          </Button>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
