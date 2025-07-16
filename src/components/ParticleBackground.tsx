@@ -15,10 +15,10 @@ const ParticleBackground = () => {
         window.particlesJS('particles-js', {
           particles: {
             number: {
-              value: 80,
+              value: 30,
               density: {
                 enable: true,
-                value_area: 800
+                value_area: 1200
               }
             },
             color: {
@@ -32,7 +32,7 @@ const ParticleBackground = () => {
               }
             },
             opacity: {
-              value: 0.5,
+              value: 0.3,
               random: false,
               anim: {
                 enable: false,
@@ -60,7 +60,7 @@ const ParticleBackground = () => {
             },
             move: {
               enable: true,
-              speed: 6,
+              speed: 2,
               direction: 'none',
               random: false,
               straight: false,

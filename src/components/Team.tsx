@@ -27,7 +27,7 @@ const team = [
     tag: "Pioneer Bug King",
     bio: "Product Engineer specializing in user experience design and system architecture with expertise in design tools.",
     skills: ["Figma", "Photoshop", "Flutter", "Python", "C++", "User Research", "System Design", "Adobe XD", "ProtoPie"],
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
   },
   {
     name: "Join Our Team",

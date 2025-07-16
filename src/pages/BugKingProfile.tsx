@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Crown, Code, Smartphone, Palette, Mail, Github, Linkedin, Award, Calendar, MapPin } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
-// import victorImage from "@/assets/victor.JPG";
 
 const bugKingsData = {
   "benjamin-sanga": {
