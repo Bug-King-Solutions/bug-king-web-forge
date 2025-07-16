@@ -14,7 +14,7 @@ const bugKings = [
     title: "Lead Front End Engineer",
     subtitle: "Full Stack Developer & Tech Lead",
     experience: "10+ years",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: "https://media.cakeresume.com/image/upload/s--EeKI5TEw--/c_fill,g_face,h_300,w_300/v1724317512/rfql28xlg1tqf2pnntpo.jpg",
     skills: ["JavaScript", "React", "Node.js", "TypeScript", "AWS", "Python", "PHP", "Laravel", "System Architecture"],
     description: "Seasoned full-stack engineer with expertise in modern web technologies and team leadership.",
     icon: Code

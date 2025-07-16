@@ -30,14 +30,6 @@ const team = [
     bio: "Product Engineer specializing in user experience design and system architecture with expertise in design tools.",
     skills: ["Figma", "Photoshop", "Flutter", "Python", "C++", "User Research", "System Design", "Adobe XD", "ProtoPie"],
     image: kareemImage
-  },
-  {
-    name: "Join Our Team",
-    role: "We're Hiring!",
-    tag: "Future Pioneer",
-    bio: "Looking for talented developers and designers to join our growing team of tech innovators.",
-    skills: ["Passion", "Innovation", "Teamwork", "Excellence"],
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
   }
 ];
 
@@ -65,7 +57,7 @@ const Team = () => {
           </Button>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <Card key={index} className="hover-lift tech-shadow border-0 card-gradient overflow-hidden">
               <div className="aspect-square overflow-hidden">
