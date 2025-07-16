@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Mail, Crown } from "lucide-react";
 import { Link } from "react-router-dom";
+import emmanuelImage from "@/assets/emmanuel.jpg";
+import kareemImage from "@/assets/kareem.jpg";
 
 const team = [
   {
@@ -19,7 +21,7 @@ const team = [
     tag: "Pioneer Bug King",
     bio: "Fullstack Mobile Developer with over 6 years of experience in cross-platform mobile development.",
     skills: ["Flutter", "Java", "Kotlin", "Node.js", "Express.js"],
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+    image: emmanuelImage
   },
   {
     name: "Kareem Victor",
@@ -27,7 +29,7 @@ const team = [
     tag: "Pioneer Bug King",
     bio: "Product Engineer specializing in user experience design and system architecture with expertise in design tools.",
     skills: ["Figma", "Photoshop", "Flutter", "Python", "C++", "User Research", "System Design", "Adobe XD", "ProtoPie"],
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    image: kareemImage
   },
   {
     name: "Join Our Team",

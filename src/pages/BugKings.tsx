@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Crown, Code, Smartphone, Palette, UserPlus } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
+import emmanuelImage from "@/assets/emmanuel.jpg";
+import kareemImage from "@/assets/kareem.jpg";
 
 const bugKings = [
   {
@@ -18,12 +20,12 @@ const bugKings = [
     icon: Code
   },
   {
-    id: "tuksa-emmanuel",
+    id: "emmanuel-david",
     name: "Emmanuel David",
     title: "Lead Mobile Engineer", 
     subtitle: "Senior Flutter Developer",
     experience: "6+ years",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    image: emmanuelImage,
     skills: ["Flutter", "Dart", "Firebase", "Node.js", "Express.js", "Mobile Architecture"],
     description: "Expert mobile developer specializing in Flutter and cross-platform solutions.",
     icon: Smartphone
@@ -34,7 +36,7 @@ const bugKings = [
     title: "Lead Product Engineer",
     subtitle: "UX Designer & Developer", 
     experience: "5+ years",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: kareemImage,
     skills: ["Figma", "Adobe Creative Suite", "Flutter", "Python", "User Research", "Prototyping"],
     description: "Creative technologist bridging design and development with user-centered solutions.",
     icon: Palette

@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Crown, Code, Smartphone, Palette, Mail, Github, Linkedin, Award, Calendar, MapPin } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
+import emmanuelImage from "@/assets/emmanuel.jpg";
+import kareemImage from "@/assets/kareem.jpg";
 
 const bugKingsData = {
   "benjamin-sanga": {
@@ -34,7 +36,7 @@ const bugKingsData = {
     title: "Lead Mobile Engineer",
     subtitle: "Senior Flutter Developer", 
     experience: "6+ years",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    image: emmanuelImage,
     skills: ["Flutter", "Dart", "Firebase", "Node.js", "Express.js", "Mobile Architecture"],
     description: "Expert mobile developer specializing in Flutter and cross-platform solutions.",
     longDescription: "Emmanuel is a passionate mobile developer with deep expertise in Flutter development. Over his 6+ years in mobile development, he has built and shipped numerous successful mobile applications. His focus on clean architecture and user experience has made him the go-to expert for complex mobile projects.",
@@ -57,7 +59,7 @@ const bugKingsData = {
     title: "Lead Product Engineer",
     subtitle: "UX Designer & Developer",
     experience: "5+ years",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: kareemImage,
     skills: ["Figma", "Adobe Creative Suite", "Flutter", "Python", "User Research", "Prototyping"],
     description: "Creative technologist bridging design and development with user-centered solutions.",
     longDescription: "Kareem is a unique talent who seamlessly bridges the gap between design and development. With a strong background in user experience design and technical implementation, he ensures that products are not only visually appealing but also technically sound and user-friendly. His holistic approach to product development has been instrumental in creating award-winning digital experiences.",
