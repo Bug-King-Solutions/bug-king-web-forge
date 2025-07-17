@@ -1,71 +1,110 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Smartphone, Palette } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
-import ParticleBackground from "./ParticleBackground";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, Code, Smartphone, Palette, Users } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <ParticleBackground />
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 hero-gradient opacity-90" />
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto animate-in fade-in duration-700">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 floating">
-            Bug King
-            <span className="magic-glow bg-clip-text text-transparent"> Solutions</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-            Your premier tech partner for software engineering, web development, 
-            mobile applications, and digital transformation solutions.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="group"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button 
-              variant="default" 
-              size="lg"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              View Our Work
-            </Button>
+    <section className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      <div className="container mx-auto px-6 py-12">
+        {/* Navigation */}
+        <nav className="flex justify-between items-center mb-20">
+          <div className="text-2xl font-bold text-foreground">
+            Bug King <span className="text-tech-yellow">Solutions</span>
           </div>
-          
-          {/* Service Icons */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg hover-lift">
-              <Code className="h-12 w-12 text-tech-yellow mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Software Engineering</h3>
-              <p className="text-gray-300 text-center">Custom software solutions built with cutting-edge technologies</p>
+          <Button 
+            variant="outline" 
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Contact Us
+          </Button>
+        </nav>
+
+        {/* Hero Content */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
+          {/* Left Column - Text Content */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <div className="inline-flex items-center px-4 py-2 bg-tech-yellow/10 rounded-full text-sm font-medium text-tech-yellow">
+                🚀 Premium Tech Solutions
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+                Transform Your 
+                <span className="text-tech-yellow block">Digital Vision</span>
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-lg">
+                We craft exceptional software solutions, mobile apps, and digital experiences 
+                that drive business growth and innovation.
+              </p>
             </div>
             
-            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg hover-lift">
-              <Smartphone className="h-12 w-12 text-tech-yellow mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Mobile Apps</h3>
-              <p className="text-gray-300 text-center">Native and cross-platform mobile applications</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg" 
+                className="group"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Explore Services
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Get Quote
+              </Button>
             </div>
+          </div>
+
+          {/* Right Column - Feature Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <Card className="p-6 hover-lift bg-card border-border/50">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-2 bg-tech-yellow/10 rounded-lg">
+                  <Code className="h-6 w-6 text-tech-yellow" />
+                </div>
+                <h3 className="font-semibold text-foreground">Software Engineering</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Custom software solutions built with modern technologies
+              </p>
+            </Card>
             
-            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg hover-lift">
-              <Palette className="h-12 w-12 text-tech-yellow mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">UI/UX Design</h3>
-              <p className="text-gray-300 text-center">Beautiful, user-centered design experiences</p>
-            </div>
+            <Card className="p-6 hover-lift bg-card border-border/50">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-2 bg-tech-yellow/10 rounded-lg">
+                  <Smartphone className="h-6 w-6 text-tech-yellow" />
+                </div>
+                <h3 className="font-semibold text-foreground">Mobile Apps</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Native and cross-platform mobile applications
+              </p>
+            </Card>
+            
+            <Card className="p-6 hover-lift bg-card border-border/50">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-2 bg-tech-yellow/10 rounded-lg">
+                  <Palette className="h-6 w-6 text-tech-yellow" />
+                </div>
+                <h3 className="font-semibold text-foreground">UI/UX Design</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Beautiful, user-centered design experiences
+              </p>
+            </Card>
+            
+            <Card className="p-6 hover-lift bg-card border-border/50">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-2 bg-tech-yellow/10 rounded-lg">
+                  <Users className="h-6 w-6 text-tech-yellow" />
+                </div>
+                <h3 className="font-semibold text-foreground">Consultation</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Strategic technology guidance for your business
+              </p>
+            </Card>
           </div>
         </div>
       </div>
