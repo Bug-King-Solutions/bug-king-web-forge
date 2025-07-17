@@ -9,7 +9,17 @@ import {
   Monitor, 
   Wifi,
   Bot,
-  Cpu
+  Cpu,
+  Heart,
+  Lightbulb,
+  Shield,
+  Briefcase,
+  GraduationCap,
+  Home,
+  Wrench,
+  TrendingUp,
+  MessageCircle,
+  Zap
 } from "lucide-react";
 
 const services = [
@@ -17,86 +27,90 @@ const services = [
     icon: Code,
     title: "Software Engineering",
     description: "Custom software development with modern technologies and best practices",
-    features: ["Full-stack development", "API integration", "Database design", "Cloud deployment"]
-  },
-  {
-    icon: Globe,
-    title: "Web Development",
-    description: "Responsive websites and web applications that drive business growth",
-    features: ["React/Next.js", "E-commerce platforms", "CMS solutions", "SEO optimization"]
+    features: ["Full-stack development", "API integration", "Database design", "Cloud deployment"],
+    color: "tech-yellow"
   },
   {
     icon: Smartphone,
     title: "Mobile Applications",
     description: "Native and cross-platform mobile apps for iOS and Android",
-    features: ["React Native", "Flutter", "Native iOS/Android", "App Store deployment"]
+    features: ["React Native", "Flutter", "Native iOS/Android", "App Store deployment"],
+    color: "tech-blue"
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description: "User-centered design that creates exceptional digital experiences",
-    features: ["User research", "Prototyping", "Visual design", "Usability testing"]
+    features: ["User research", "Prototyping", "Visual design", "Usability testing"],
+    color: "tech-purple"
   },
   {
-    icon: Bot,
-    title: "Robotics",
-    description: "Advanced robotics solutions for automation and intelligent systems",
-    features: ["Robot development", "Automation systems", "AI integration", "Custom robotics"]
+    icon: Globe,
+    title: "Web Development",
+    description: "Responsive websites and web applications that drive business growth",
+    features: ["React/Next.js", "E-commerce platforms", "CMS solutions", "SEO optimization"],
+    color: "tech-green"
   },
   {
-    icon: Cpu,
-    title: "IoT Solutions",
-    description: "Internet of Things solutions for smart connectivity and data collection",
-    features: ["IoT device development", "Sensor networks", "Data analytics", "Smart systems"]
+    icon: Briefcase,
+    title: "Business Solutions",
+    description: "Process optimization and workflow improvements for better efficiency",
+    features: ["Process automation", "Workflow design", "System integration", "Performance tracking"],
+    color: "tech-orange"
   },
   {
-    icon: Users,
-    title: "Tech Consultation",
-    description: "Strategic technology guidance to accelerate your digital transformation",
-    features: ["Technology audits", "Architecture planning", "Team training", "Process optimization"]
+    icon: Heart,
+    title: "Personal Development",
+    description: "Life coaching and personal growth solutions tailored to your needs",
+    features: ["Goal setting", "Habit building", "Mindset coaching", "Progress tracking"],
+    color: "tech-pink"
   },
   {
-    icon: Cog,
-    title: "Solution Deployment",
-    description: "End-to-end deployment and maintenance of your technology solutions",
-    features: ["Cloud migration", "DevOps setup", "Security implementation", "Performance monitoring"]
+    icon: GraduationCap,
+    title: "Education & Training",
+    description: "Learning solutions and skill development programs",
+    features: ["Custom curricula", "Online courses", "Workshops", "Certification programs"],
+    color: "tech-blue"
   },
   {
-    icon: Monitor,
-    title: "IT Equipment",
-    description: "Purchase and installation of cutting-edge IT gadgets and hardware",
-    features: ["Hardware procurement", "Setup & configuration", "Maintenance support", "Upgrade planning"]
+    icon: Home,
+    title: "Home & Lifestyle",
+    description: "Solutions for everyday home and lifestyle challenges",
+    features: ["Home automation", "Organization systems", "Lifestyle optimization", "Smart solutions"],
+    color: "tech-green"
   },
   {
-    icon: Wifi,
-    title: "Networking & Internet",
-    description: "Reliable networking solutions and internet services for your business",
-    features: ["Network design", "Internet setup", "Security configuration", "24/7 support"]
+    icon: Shield,
+    title: "Support & Maintenance",
+    description: "24/7 support and ongoing maintenance for all your solutions",
+    features: ["Technical support", "System monitoring", "Regular updates", "Emergency response"],
+    color: "tech-yellow"
   }
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-muted/20">
+    <section id="services" className="py-24 surface-gradient">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-            What We <span className="text-tech-yellow">Deliver</span>
+        <div className="max-w-4xl mx-auto mb-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Problems We <span className="problem-solving-glow bg-clip-text text-transparent">Solve</span>
           </h2>
-          <p className="text-lg text-muted-foreground text-center">
-            Comprehensive technology solutions tailored to your business needs
+          <p className="text-lg text-muted-foreground">
+            Our Bug Kings are masters across multiple domains, ready to tackle any challenge life throws your way
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            const colorClass = service.color;
             return (
-              <Card key={index} className="group hover-lift bg-card border-border/50 transition-all duration-300">
+              <Card key={index} className="group hover-lift surface-gradient border-border/50 transition-all duration-300">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="p-3 bg-tech-yellow/10 rounded-xl group-hover:bg-tech-yellow/20 transition-colors">
-                      <IconComponent className="h-6 w-6 text-tech-yellow" />
+                    <div className={`p-3 bg-${colorClass}/10 rounded-xl group-hover:bg-${colorClass}/20 transition-colors`}>
+                      <IconComponent className={`h-6 w-6 text-${colorClass}`} />
                     </div>
                     <CardTitle className="text-lg">{service.title}</CardTitle>
                   </div>
@@ -108,7 +122,7 @@ const Services = () => {
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-tech-yellow rounded-full mr-3 flex-shrink-0" />
+                        <div className={`w-1.5 h-1.5 bg-${colorClass} rounded-full mr-3 flex-shrink-0`} />
                         {feature}
                       </div>
                     ))}

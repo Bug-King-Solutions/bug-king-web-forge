@@ -2,30 +2,30 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const stats = [
   {
-    number: "30+",
-    label: "Projects Completed",
-    description: "Successfully delivered solutions"
+    number: "100+",
+    label: "Problems Solved",
+    description: "Across all life domains"
   },
   {
-    number: "20+",
+    number: "50+",
     label: "Happy Clients",
-    description: "Across various industries"
+    description: "From tech to personal life"
   },
   {
-    number: "10+",
-    label: "Years Experience",
-    description: "In technology solutions"
+    number: "15+",
+    label: "Bug Kings",
+    description: "Expert problem-solvers"
   },
   {
     number: "24/7",
     label: "Support",
-    description: "Round-the-clock assistance"
+    description: "Always here to help"
   }
 ];
 
 const Stats = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 hero-gradient">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">

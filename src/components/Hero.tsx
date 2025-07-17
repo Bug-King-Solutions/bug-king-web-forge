@@ -1,22 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Code, Smartphone, Palette, Users } from "lucide-react";
+import { ArrowRight, Crown, Lightbulb, Target, Zap, Heart, Shield } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
-      <div className="container mx-auto px-6 py-12">
+    <section className="min-h-screen hero-gradient">
+      <div className="container mx-auto px-6 py-8">
         {/* Navigation */}
         <nav className="flex justify-between items-center mb-20">
           <div className="text-2xl font-bold text-foreground">
-            Bug King <span className="text-tech-yellow">Solutions</span>
+            <Crown className="inline-block mr-2 h-6 w-6 text-tech-yellow" />
+            Bug King <span className="problem-solving-glow bg-clip-text text-transparent">Solutions</span>
           </div>
-          <Button 
-            variant="outline" 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Contact Us
-          </Button>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Button 
+              variant="outline" 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Get Help
+            </Button>
+          </div>
         </nav>
 
         {/* Hero Content */}
@@ -24,26 +29,29 @@ const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center px-4 py-2 bg-tech-yellow/10 rounded-full text-sm font-medium text-tech-yellow">
-                🚀 Premium Tech Solutions
+              <div className="inline-flex items-center px-4 py-2 surface-gradient rounded-full text-sm font-medium text-tech-yellow border border-tech-yellow/20">
+                <Crown className="mr-2 h-4 w-4" />
+                Problem-Solving Experts
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                Transform Your 
-                <span className="text-tech-yellow block">Digital Vision</span>
+                We Are The
+                <span className="problem-solving-glow bg-clip-text text-transparent block">Bug Kings</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
-                We craft exceptional software solutions, mobile apps, and digital experiences 
-                that drive business growth and innovation.
+                From technology challenges to life's everyday problems, our Bug Kings are 
+                masters at finding solutions across all aspects of life. We don't just fix bugs - 
+                we solve problems that matter.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="group"
+                className="group tech-shadow"
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Explore Services
+                <Zap className="mr-2 h-5 w-5" />
+                See Our Solutions
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button 
@@ -51,58 +59,59 @@ const Hero = () => {
                 size="lg"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Get Quote
+                <Heart className="mr-2 h-5 w-5" />
+                Get Help Now
               </Button>
             </div>
           </div>
 
-          {/* Right Column - Feature Cards */}
+          {/* Right Column - Problem-Solving Areas */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <Card className="p-6 hover-lift bg-card border-border/50">
+            <Card className="p-6 hover-lift surface-gradient border-border/50 group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-2 bg-tech-yellow/10 rounded-lg">
-                  <Code className="h-6 w-6 text-tech-yellow" />
+                <div className="p-3 bg-tech-yellow/10 rounded-xl group-hover:bg-tech-yellow/20 transition-colors">
+                  <Lightbulb className="h-6 w-6 text-tech-yellow" />
                 </div>
-                <h3 className="font-semibold text-foreground">Software Engineering</h3>
+                <h3 className="font-semibold text-foreground">Technology</h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                Custom software solutions built with modern technologies
+                Software bugs, system issues, and digital challenges solved by our tech experts
               </p>
             </Card>
             
-            <Card className="p-6 hover-lift bg-card border-border/50">
+            <Card className="p-6 hover-lift surface-gradient border-border/50 group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-2 bg-tech-yellow/10 rounded-lg">
-                  <Smartphone className="h-6 w-6 text-tech-yellow" />
+                <div className="p-3 bg-tech-green/10 rounded-xl group-hover:bg-tech-green/20 transition-colors">
+                  <Target className="h-6 w-6 text-tech-green" />
                 </div>
-                <h3 className="font-semibold text-foreground">Mobile Apps</h3>
+                <h3 className="font-semibold text-foreground">Business</h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                Native and cross-platform mobile applications
+                Process optimization, workflow improvements, and operational solutions
               </p>
             </Card>
             
-            <Card className="p-6 hover-lift bg-card border-border/50">
+            <Card className="p-6 hover-lift surface-gradient border-border/50 group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-2 bg-tech-yellow/10 rounded-lg">
-                  <Palette className="h-6 w-6 text-tech-yellow" />
+                <div className="p-3 bg-tech-purple/10 rounded-xl group-hover:bg-tech-purple/20 transition-colors">
+                  <Heart className="h-6 w-6 text-tech-purple" />
                 </div>
-                <h3 className="font-semibold text-foreground">UI/UX Design</h3>
+                <h3 className="font-semibold text-foreground">Personal</h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                Beautiful, user-centered design experiences
+                Life coaching, personal development, and everyday problem-solving
               </p>
             </Card>
             
-            <Card className="p-6 hover-lift bg-card border-border/50">
+            <Card className="p-6 hover-lift surface-gradient border-border/50 group">
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-2 bg-tech-yellow/10 rounded-lg">
-                  <Users className="h-6 w-6 text-tech-yellow" />
+                <div className="p-3 bg-tech-blue/10 rounded-xl group-hover:bg-tech-blue/20 transition-colors">
+                  <Shield className="h-6 w-6 text-tech-blue" />
                 </div>
-                <h3 className="font-semibold text-foreground">Consultation</h3>
+                <h3 className="font-semibold text-foreground">Support</h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                Strategic technology guidance for your business
+                24/7 assistance and ongoing support for all your needs
               </p>
             </Card>
           </div>

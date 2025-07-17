@@ -66,6 +66,10 @@ export default {
 					black: 'hsl(var(--tech-black))',
 					yellow: 'hsl(var(--tech-yellow))',
 					blue: 'hsl(var(--tech-blue))',
+					purple: 'hsl(var(--tech-purple))',
+					green: 'hsl(var(--tech-green))',
+					orange: 'hsl(var(--tech-orange))',
+					pink: 'hsl(var(--tech-pink))',
 					'yellow-glow': 'hsl(var(--tech-yellow-glow))',
 					'blue-glow': 'hsl(var(--tech-blue-glow))'
 				}
