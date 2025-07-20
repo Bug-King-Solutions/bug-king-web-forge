@@ -47,7 +47,7 @@ const Clients = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Trusted by <span className="text-tech-yellow">Industry Leaders</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             We've had the privilege of working with amazing companies across various industries
           </p>
         </div>

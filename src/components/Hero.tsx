@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Crown, Lightbulb, Target, Zap, Heart, Shield, Bug } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+
 
 const Hero = () => {
   return (
@@ -17,7 +17,6 @@ const Hero = () => {
             Bug King <span className="problem-solving-glow bg-clip-text text-transparent">Solutions</span>
           </div>
           <div className="flex items-center gap-4">
-            <ThemeToggle />
             <Button 
               variant="outline" 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

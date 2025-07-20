@@ -11,7 +11,7 @@ const bugKings = [
   {
     id: "benjamin-sanga",
     name: "Benjamin Sanga",
-    title: "Lead Front End Engineer",
+    title: "Lead Web Engineer",
     subtitle: "Full Stack Developer & Tech Lead",
     experience: "10+ years",
     image: "https://media.cakeresume.com/image/upload/s--EeKI5TEw--/c_fill,g_face,h_300,w_300/v1724317512/rfql28xlg1tqf2pnntpo.jpg",
@@ -80,7 +80,7 @@ const BugKings = () => {
             return (
               <Card key={king.id} className="group hover-lift border-2 hover:border-primary/50 transition-all duration-300">
                 <CardContent className="p-6">
-                  <Link to={`/bug-kings/${king.id}`} className="block">
+                  <div className="block">
                     <div className="text-center mb-4">
                       <div className="relative w-24 h-24 mx-auto mb-4">
                         <img 
@@ -104,7 +104,7 @@ const BugKings = () => {
 
                     <div className="text-center mb-4">
                       <IconComponent className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground">{king.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{king.description}</p>
                     </div>
 
                     <div className="flex flex-wrap gap-1 justify-center">
@@ -119,7 +119,7 @@ const BugKings = () => {
                         </Badge>
                       )}
                     </div>
-                  </Link>
+                  </div>
                 </CardContent>
               </Card>
             );

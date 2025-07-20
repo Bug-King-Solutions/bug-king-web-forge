@@ -48,7 +48,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-tech-yellow">Contact</h4>
             <ul className="space-y-2 text-gray-300">
               <li>kareem@bugkingsolutions.com</li>
-              <li>+234 (xxx) xxx-xxxx</li>
+              <li>+234 802 446 9094</li>
               <li>Netaccess Communications Limited</li>
               <li>Suite 1, 3rd Floor Taen Building</li>
               <li>Old Airport Junction, Jos</li>

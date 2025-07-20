@@ -10,7 +10,7 @@ import kareemImage from "@/assets/kareem.jpg";
 const bugKingsData = {
   "benjamin-sanga": {
     name: "Benjamin Sanga",
-    title: "Lead Front End Engineer",
+    title: "Lead Web Engineer",
     subtitle: "Full Stack Developer & Tech Lead",
     experience: "10+ years",
     image: "https://media.cakeresume.com/image/upload/s--EeKI5TEw--/c_fill,g_face,h_300,w_300/v1724317512/rfql28xlg1tqf2pnntpo.jpg",

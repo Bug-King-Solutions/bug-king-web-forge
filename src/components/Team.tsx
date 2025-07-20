@@ -9,7 +9,7 @@ import kareemImage from "@/assets/kareem.jpg";
 const team = [
   {
     name: "Benjamin Sanga",
-    role: "Lead Frontend Engineer",
+    role: "Lead Web Engineer",
     tag: "Pioneer Bug King",
     bio: "Full Stack Developer with over 10 years of experience specializing in modern web technologies and robotics.",
     skills: ["Vanilla JS", "Node.js", "React", "TypeScript", "AWS", "Robotics", "Java", "Python", "C#", "PHP", "Laravel"],
