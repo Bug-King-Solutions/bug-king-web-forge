@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Crown, Lightbulb, Target, Zap, Heart, Shield } from "lucide-react";
+import { ArrowRight, Crown, Lightbulb, Target, Zap, Heart, Shield, Bug } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const Hero = () => {
@@ -9,8 +9,11 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-8">
         {/* Navigation */}
         <nav className="flex justify-between items-center mb-20">
-          <div className="text-2xl font-bold text-foreground">
-            <Crown className="inline-block mr-2 h-6 w-6 text-tech-yellow" />
+          <div className="flex items-center text-2xl font-bold text-foreground">
+            <div className="relative mr-3">
+              <Bug className="h-8 w-8 text-tech-purple" />
+              <Crown className="absolute -top-1 -right-1 h-5 w-5 text-tech-yellow" />
+            </div>
             Bug King <span className="problem-solving-glow bg-clip-text text-transparent">Solutions</span>
           </div>
           <div className="flex items-center gap-4">
@@ -30,7 +33,10 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 surface-gradient rounded-full text-sm font-medium text-tech-yellow border border-tech-yellow/20">
-                <Crown className="mr-2 h-4 w-4" />
+                <div className="relative mr-2">
+                  <Bug className="h-4 w-4 text-tech-purple" />
+                  <Crown className="absolute -top-0.5 -right-0.5 h-3 w-3 text-tech-yellow" />
+                </div>
                 Problem-Solving Experts
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">

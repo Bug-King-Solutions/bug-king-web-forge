@@ -75,7 +75,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-tech-yellow mr-3" />
                   <h3 className="text-xl font-semibold text-white">Email Us</h3>
                 </div>
-                <p className="text-gray-200 mb-2">info@bugkingsolutions.com</p>
+                <p className="text-gray-200 mb-2">kareem@bugkingsolutions.com</p>
                 <p className="text-gray-200">support@bugkingsolutions.com</p>
               </CardContent>
             </Card>
@@ -97,8 +97,9 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-tech-yellow mr-3" />
                   <h3 className="text-xl font-semibold text-white">Visit Us</h3>
                 </div>
-                <p className="text-gray-200 mb-2">123 Tech Street</p>
-                <p className="text-gray-200">Innovation District, CA 90210</p>
+                <p className="text-gray-200 mb-2">Netaccess Communications Limited</p>
+                <p className="text-gray-200">Suite 1, 3rd Floor Taen Building</p>
+                <p className="text-gray-200">Old Airport Junction, Jos</p>
               </CardContent>
             </Card>
             
