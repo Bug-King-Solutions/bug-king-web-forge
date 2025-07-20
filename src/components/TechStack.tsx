@@ -62,49 +62,59 @@ const techCategories = [
 
 const TechStack = () => {
   return (
-    <section className="py-20 bg-tech-black">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our <span className="text-tech-yellow">Tech Stack</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Our <span className="gradient-text">Expertise</span>
           </h2>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            We leverage cutting-edge technologies to build robust, scalable solutions
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            We leverage cutting-edge technologies across all domains to solve your problems
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {techCategories.map((category, index) => (
-            <Card key={index} className="bg-white/95 backdrop-blur-sm hover-lift">
-              <CardHeader className="text-center">
-                <CardTitle className="text-xl text-tech-black">{category.category}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {category.technologies.map((tech, techIndex) => (
-                    <Badge 
-                      key={techIndex} 
-                      className={`${category.color} font-medium px-3 py-1 flex items-center gap-2`}
-                      variant="outline"
-                    >
-                      <img 
-                        src={tech.logo} 
-                        alt={`${tech.name} logo`} 
-                        className="w-5 h-5 object-contain"
-                      />
-                      {tech.name}
-                    </Badge>
-                  ))}
+            <div key={index} className="group">
+              <div className="relative p-6 rounded-xl border border-border/20 bg-card/5 backdrop-blur-sm hover:bg-card/10 transition-all duration-300 hover:shadow-glow hover:-translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative z-10">
+                  <h3 className="text-lg font-bold text-foreground mb-6 text-center">
+                    {category.category}
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    {category.technologies.map((tech, techIndex) => (
+                      <div 
+                        key={techIndex} 
+                        className="flex items-center gap-3 p-3 rounded-lg bg-background/50 border border-border/10 hover:border-primary/20 transition-all duration-200 group/tech"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover/tech:scale-110 transition-transform duration-200">
+                          <img 
+                            src={tech.logo} 
+                            alt={`${tech.name} logo`} 
+                            className="w-5 h-5 object-contain"
+                          />
+                        </div>
+                        <span className="text-sm font-medium text-foreground group-hover/tech:text-primary transition-colors duration-200">
+                          {tech.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <p className="text-gray-300 text-lg">
-            And many more technologies to meet your specific needs
-          </p>
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-border/20">
+            <span className="text-muted-foreground">
+              And many more technologies to meet your specific needs
+            </span>
+          </div>
         </div>
       </div>
     </section>

@@ -19,10 +19,10 @@ const Contact = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="bg-white/95 backdrop-blur-sm">
+          <Card className="bg-card/10 backdrop-blur-sm border-border/20">
             <CardHeader>
-              <CardTitle className="text-2xl">Send us a message</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-2xl text-foreground">Send us a message</CardTitle>
+              <CardDescription className="text-muted-foreground">
                 Fill out the form below and we'll get back to you within 24 hours
               </CardDescription>
             </CardHeader>
