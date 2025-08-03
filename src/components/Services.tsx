@@ -97,7 +97,8 @@ const Services = () => {
             Problems We <span className="problem-solving-glow bg-clip-text text-transparent">Solve</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our Bug Kings are masters across multiple domains, ready to tackle any challenge life throws your way
+            Whether it's a coding challenge, business process, personal goal, or lifestyle improvement - 
+            our Bug Kings solve problems across every aspect of life
           </p>
         </div>
         
