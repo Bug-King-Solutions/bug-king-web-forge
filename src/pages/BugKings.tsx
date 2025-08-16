@@ -4,46 +4,42 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Crown, Code, Smartphone, Palette, UserPlus } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
-import emmanuelImage from "@/assets/emmanuel.jpg";
-import kareemImage from "@/assets/kareem.jpg";
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
+import { BugKing } from "@/types/bug-kings";
 
-const bugKings = [
-  {
-    id: "benjamin-sanga",
-    name: "Benjamin Sanga",
-    title: "Lead Web Engineer",
-    subtitle: "Full Stack Developer & Tech Lead",
-    experience: "10+ years",
-    image: "https://media.cakeresume.com/image/upload/s--EeKI5TEw--/c_fill,g_face,h_300,w_300/v1724317512/rfql28xlg1tqf2pnntpo.jpg",
-    skills: ["JavaScript", "React", "Node.js", "TypeScript", "AWS", "Python", "PHP", "Laravel", "System Architecture"],
-    description: "Seasoned full-stack engineer with expertise in modern web technologies and team leadership.",
-    icon: Code
-  },
-  {
-    id: "emmanuel-david",
-    name: "Emmanuel David",
-    title: "Lead Mobile Engineer", 
-    subtitle: "Senior Flutter Developer",
-    experience: "6+ years",
-    image: emmanuelImage,
-    skills: ["Flutter", "Dart", "Firebase", "Node.js", "Express.js", "Mobile Architecture"],
-    description: "Expert mobile developer specializing in Flutter and cross-platform solutions.",
-    icon: Smartphone
-  },
-  {
-    id: "kareem-victor",
-    name: "Kareem Victor",
-    title: "Lead Product Engineer",
-    subtitle: "UX Designer & Developer", 
-    experience: "5+ years",
-    image: kareemImage,
-    skills: ["Figma", "Adobe Creative Suite", "Flutter", "Python", "User Research", "Prototyping"],
-    description: "Creative technologist bridging design and development with user-centered solutions.",
-    icon: Palette
-  }
-];
+const fetchBugKings = async (): Promise<BugKing[]> => {
+  const { data, error } = await (supabase as any)
+    .from('bug_kings')
+    .select('*')
+    .order('created_at', { ascending: true });
+  
+  if (error) throw error;
+  return (data as BugKing[]) || [];
+};
+
+const getIconForTitle = (title: string) => {
+  if (title.toLowerCase().includes('web') || title.toLowerCase().includes('full')) return Code;
+  if (title.toLowerCase().includes('mobile')) return Smartphone;
+  if (title.toLowerCase().includes('product') || title.toLowerCase().includes('design')) return Palette;
+  return Code;
+};
 
 const BugKings = () => {
+  const { data: bugKings, isLoading } = useQuery({
+    queryKey: ['bug_kings'],
+    queryFn: fetchBugKings,
+  });
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background relative overflow-hidden flex items-center justify-center">
+        <ParticleBackground />
+        <div className="text-xl text-muted-foreground">Loading Bug Kings...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <ParticleBackground />
@@ -75,8 +71,8 @@ const BugKings = () => {
 
         {/* Bug Kings Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {bugKings.map((king) => {
-            const IconComponent = king.icon;
+          {bugKings?.map((king) => {
+            const IconComponent = getIconForTitle(king.title);
             return (
               <Card key={king.id} className="group hover-lift border-2 hover:border-primary/50 transition-all duration-300">
                 <CardContent className="p-6">
@@ -84,7 +80,7 @@ const BugKings = () => {
                     <div className="text-center mb-4">
                       <div className="relative w-24 h-24 mx-auto mb-4">
                         <img 
-                          src={king.image} 
+                          src={king.image_url || '/placeholder.svg'} 
                           alt={king.name}
                           className="w-full h-full rounded-full object-cover border-4 border-primary/20"
                         />
@@ -95,27 +91,27 @@ const BugKings = () => {
                       
                       <h3 className="text-xl font-bold mb-1">{king.name}</h3>
                       <p className="text-primary font-semibold">{king.title}</p>
-                      <p className="text-sm text-muted-foreground mb-2">{king.subtitle}</p>
+                      <p className="text-sm text-muted-foreground mb-2">{king.description}</p>
                       
                       <Badge variant="secondary" className="mb-4">
-                        Pioneer Bug King • {king.experience}
+                        Pioneer Bug King
                       </Badge>
                     </div>
 
                     <div className="text-center mb-4">
                       <IconComponent className="h-8 w-8 text-primary mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground leading-relaxed">{king.description}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{king.bio}</p>
                     </div>
 
                     <div className="flex flex-wrap gap-1 justify-center">
-                      {king.skills.slice(0, 4).map((skill) => (
+                      {king.skills?.slice(0, 4).map((skill) => (
                         <Badge key={skill} variant="outline" className="text-xs">
                           {skill}
                         </Badge>
                       ))}
-                      {king.skills.length > 4 && (
+                      {(king.skills?.length || 0) > 4 && (
                         <Badge variant="outline" className="text-xs">
-                          +{king.skills.length - 4} more
+                          +{(king.skills?.length || 0) - 4} more
                         </Badge>
                       )}
                     </div>
