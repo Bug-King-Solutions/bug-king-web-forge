@@ -86,8 +86,8 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-tech-yellow mr-3" />
                   <h3 className="text-xl font-semibold text-white">Call Us</h3>
                 </div>
-                <p className="text-gray-200 mb-2">+1 (555) 123-4567</p>
-                <p className="text-gray-200">+1 (555) 987-6543</p>
+                <p className="text-gray-200 mb-2">+234 802 446 9094</p>
+                <p className="text-gray-200">+44 7831 525034</p>
               </CardContent>
             </Card>
             
@@ -109,9 +109,7 @@ const Contact = () => {
                   <Clock className="h-6 w-6 text-tech-yellow mr-3" />
                   <h3 className="text-xl font-semibold text-white">Business Hours</h3>
                 </div>
-                <p className="text-gray-200 mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p className="text-gray-200">Saturday: 10:00 AM - 4:00 PM</p>
-                <p className="text-gray-200">Sunday: Closed</p>
+                <p className="text-gray-200">Active everyday</p>
               </CardContent>
             </Card>
           </div>
